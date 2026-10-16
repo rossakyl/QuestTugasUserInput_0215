@@ -112,8 +112,17 @@ fun FormBiodataScreen() {
                 .padding(innerPadding)
                 .background(colorResource(id = R.color.bg_screen))
         ) {
+            // Header Background Neon
+            Image(
+                painter = painterResource(id = R.drawable.bg_header_neon),
+                contentDescription = stringResource(id = R.string.content_desc_header),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(dimensionResource(id = R.dimen.header_height)),
+                contentScale = ContentScale.Crop
+            )
 
-
+           
         }
     }
 }
