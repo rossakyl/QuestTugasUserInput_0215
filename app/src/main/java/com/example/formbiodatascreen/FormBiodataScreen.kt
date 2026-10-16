@@ -70,7 +70,11 @@ fun FormBiodataScreen() {
 
     // State Dropdown
     var isDropdownExpanded by remember { mutableStateOf(false) }
-    val experienceOptions = listOf("Beginner", "Intermediate", "Advanced")
+    val experienceOptions = listOf(
+        stringResource(id = R.string.exp_beginner),
+        stringResource(id = R.string.exp_intermediate),
+        stringResource(id = R.string.exp_advanced)
+    )
 
     // State Notifikasi Muncul 5 Detik
     var isSubmitted by remember { mutableStateOf(false) }
@@ -362,24 +366,24 @@ fun FormBiodataScreen() {
                                 }.joinToString(", ")
 
                                 Text(
-                                    text = "Nama: $firstName $lastName",
+                                    text = stringResource(id = R.string.label_result_nama, firstName, lastName),
                                     color = colorResource(id = R.color.popup_text),
                                     fontWeight = FontWeight.Bold
                                 )
                                 Text(
-                                    text = "Email: $email",
+                                    text = stringResource(id = R.string.label_result_email, email),
                                     color = colorResource(id = R.color.popup_text)
                                 )
                                 Text(
-                                    text = "Tgl Lahir: $birthDate",
+                                    text = stringResource(id = R.string.label_result_tgl_lahir, birthDate),
                                     color = colorResource(id = R.color.popup_text)
                                 )
                                 Text(
-                                    text = "Experience: $experience",
+                                    text = stringResource(id = R.string.label_result_experience, experience),
                                     color = colorResource(id = R.color.popup_text)
                                 )
                                 Text(
-                                    text = "Skills: $skills",
+                                    text = stringResource(id = R.string.label_result_skills, skills),
                                     color = colorResource(id = R.color.popup_text)
                                 )
                             }

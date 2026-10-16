@@ -16,4 +16,14 @@
         <string name="content_desc_calendar">Pilih Tanggal</string>
         <string name="dialog_btn_ok">OK</string>
         <string name="dialog_btn_cancel">Cancel</string>
+
+    <!-- Tambahan agar tidak ada Hardcode Dropdown -->
+    <string name="exp_beginner">Beginner</string>
+    <string name="exp_intermediate">Intermediate</string>
+    <string name="exp_advanced">Advanced</string>
+    <string name="label_result_nama">Nama: %1$s %2$s</string>
+    <string name="label_result_email">Email: %1$s</string>
+    <string name="label_result_tgl_lahir">Tgl Lahir: %1$s</string>
+    <string name="label_result_experience">Experience: %1$s</string>
+    <string name="label_result_skills">Skills: %1$s</string>
 </resources>
