@@ -208,7 +208,30 @@ fun FormBiodataScreen() {
 
                     Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.space_medium)))
 
-                   
+                    // Input Tgl Lahir & Dropdown Experience
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.space_small))
+                    ) {
+                        // Tanggal Lahir (bisa diketik manual / via kalender)
+                        OutlinedTextField(
+                            value = birthDate,
+                            onValueChange = { birthDate = it },
+                            placeholder = { Text(stringResource(id = R.string.hint_tgl_lahir)) },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.input_corner_radius)),
+                            singleLine = true,
+                            trailingIcon = {
+                                IconButton(onClick = { datePickerDialog.show() }) {
+                                    Text(text = "📅")
+                                }
+                            },
+                            colors = OutlinedTextFieldDefaults.colors(
+                                unfocusedBorderColor = colorResource(id = R.color.text_field_border)
+                            )
+                        )
+
+                    }
                 }
             }
         }
