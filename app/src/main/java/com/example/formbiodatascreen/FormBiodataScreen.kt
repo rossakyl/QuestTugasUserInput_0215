@@ -355,10 +355,38 @@ fun FormBiodataScreen() {
                                 modifier = Modifier.padding(dimensionResource(id = R.dimen.card_inner_padding)),
                                 verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.space_small))
                             ) {
+                                val skills = buildList {
+                                    if (isAndroidChecked) add(stringResource(id = R.string.skill_android))
+                                    if (isUiUxChecked) add(stringResource(id = R.string.skill_uiux))
+                                    if (isWebChecked) add(stringResource(id = R.string.skill_web))
+                                }.joinToString(", ")
 
+                                Text(
+                                    text = "Nama: $firstName $lastName",
+                                    color = colorResource(id = R.color.popup_text),
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    text = "Email: $email",
+                                    color = colorResource(id = R.color.popup_text)
+                                )
+                                Text(
+                                    text = "Tgl Lahir: $birthDate",
+                                    color = colorResource(id = R.color.popup_text)
+                                )
+                                Text(
+                                    text = "Experience: $experience",
+                                    color = colorResource(id = R.color.popup_text)
+                                )
+                                Text(
+                                    text = "Skills: $skills",
+                                    color = colorResource(id = R.color.popup_text)
+                                )
                             }
                         }
                     }
+
+
                 }
             }
         }
