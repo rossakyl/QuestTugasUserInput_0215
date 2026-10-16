@@ -102,5 +102,18 @@ fun FormBiodataScreen() {
             experience.isNotBlank() &&
             (isAndroidChecked || isUiUxChecked || isWebChecked)
 
+    Scaffold(
+        modifier = Modifier.fillMaxSize()
+    ) { innerPadding ->
+        // Root Container Box: Layer floating di atas Scaffold
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .background(colorResource(id = R.color.bg_screen))
+        ) {
 
+
+        }
+    }
 }
