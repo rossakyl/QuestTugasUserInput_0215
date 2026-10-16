@@ -231,7 +231,46 @@ fun FormBiodataScreen() {
                             )
                         )
 
+                        // Experience Dropdown
+                        ExposedDropdownMenuBox(
+                            expanded = isDropdownExpanded,
+                            onExpandedChange = { isDropdownExpanded = !isDropdownExpanded },
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            OutlinedTextField(
+                                value = experience,
+                                onValueChange = {},
+                                readOnly = true,
+                                placeholder = { Text(stringResource(id = R.string.hint_experience)) },
+                                trailingIcon = {
+                                    ExposedDropdownMenuDefaults.TrailingIcon(expanded = isDropdownExpanded)
+                                },
+                                shape = RoundedCornerShape(dimensionResource(id = R.dimen.input_corner_radius)),
+                                modifier = Modifier.menuAnchor(),
+                                colors = OutlinedTextFieldDefaults.colors(
+                                    unfocusedBorderColor = colorResource(id = R.color.text_field_border)
+                                )
+                            )
+                            ExposedDropdownMenu(
+                                expanded = isDropdownExpanded,
+                                onDismissRequest = { isDropdownExpanded = false }
+                            ) {
+                                experienceOptions.forEach { option ->
+                                    DropdownMenuItem(
+                                        text = { Text(option) },
+                                        onClick = {
+                                            experience = option
+                                            isDropdownExpanded = false
+                                        }
+                                    )
+                                }
+                            }
+                        }
                     }
+
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.space_medium)))
+
+                   
                 }
             }
         }
