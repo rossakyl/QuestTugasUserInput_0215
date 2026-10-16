@@ -7,4 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="bg_screen">#F3F4F6</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="title_purple">#6236FF</color>
+    <color name="text_sub_gray">#757575</color>
+    <color name="text_field_border">#B0B0B0</color>
+    <color name="text_black">#1F1F1F</color>
+    <color name="btn_disabled_bg">#E0E0E0</color>
+    <color name="btn_disabled_text">#FFFFFF</color>
+    <color name="btn_active_bg">#6236FF</color>
+    <color name="btn_active_text">#FFFFFF</color>
+    <color name="popup_bg">#1E1E1E</color>
+    <color name="popup_text">#FFFFFF</color>
 </resources>
