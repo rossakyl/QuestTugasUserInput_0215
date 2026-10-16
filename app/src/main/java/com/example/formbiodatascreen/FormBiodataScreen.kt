@@ -122,7 +122,32 @@ fun FormBiodataScreen() {
                 contentScale = ContentScale.Crop
             )
 
-           
+            // Form Box Mengapung (Floating Card)
+            Card(
+                shape = RoundedCornerShape(
+                    topStart = dimensionResource(id = R.dimen.card_corner_radius),
+                    topEnd = dimensionResource(id = R.dimen.card_corner_radius)
+                ),
+                elevation = CardDefaults.cardElevation(
+                    defaultElevation = dimensionResource(id = R.dimen.card_elevation)
+                ),
+                colors = CardDefaults.cardColors(
+                    containerColor = colorResource(id = R.color.card_background)
+                ),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(top = dimensionResource(id = R.dimen.floating_card_top_margin))
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(dimensionResource(id = R.dimen.card_inner_padding))
+                        .verticalScroll(rememberScrollState()),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+
+                }
+            }
         }
     }
 }
