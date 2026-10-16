@@ -386,7 +386,8 @@ fun FormBiodataScreen() {
                         }
                     }
 
-
+                    // Spacer cadangan di bagian bawah agar saat di-scroll hasil tidak mepet ke tepi layar
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.space_large)))
                 }
             }
         }
