@@ -332,7 +332,33 @@ fun FormBiodataScreen() {
                         )
                     }
 
-                   
+                    // Card Hasil Input Muncul di Bawah Tombol Proceed (Hilang Otomatis setelah 5 Detik)
+                    AnimatedVisibility(
+                        visible = isSubmitted,
+                        enter = fadeIn(),
+                        exit = fadeOut(),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = dimensionResource(id = R.dimen.space_medium))
+                    ) {
+                        Card(
+                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.input_corner_radius)),
+                            colors = CardDefaults.cardColors(
+                                containerColor = colorResource(id = R.color.popup_bg)
+                            ),
+                            elevation = CardDefaults.cardElevation(
+                                defaultElevation = dimensionResource(id = R.dimen.card_elevation)
+                            ),
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Column(
+                                modifier = Modifier.padding(dimensionResource(id = R.dimen.card_inner_padding)),
+                                verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.space_small))
+                            ) {
+
+                            }
+                        }
+                    }
                 }
             }
         }
