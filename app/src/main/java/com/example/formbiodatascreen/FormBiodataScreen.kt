@@ -68,5 +68,19 @@ fun FormBiodataScreen() {
     var isUiUxChecked by remember { mutableStateOf(false) }
     var isWebChecked by remember { mutableStateOf(false) }
 
-    
+    // State Dropdown
+    var isDropdownExpanded by remember { mutableStateOf(false) }
+    val experienceOptions = listOf("Beginner", "Intermediate", "Advanced")
+
+    // State Notifikasi Muncul 5 Detik
+    var isSubmitted by remember { mutableStateOf(false) }
+
+    if (isSubmitted) {
+        LaunchedEffect(isSubmitted) {
+            delay(5000L)
+            isSubmitted = false
+        }
+    }
+
+   
 }
