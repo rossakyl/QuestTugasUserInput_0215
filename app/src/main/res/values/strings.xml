@@ -11,4 +11,7 @@
         <string name="skill_android">Android</string>
         <string name="skill_uiux">UI/UX</string>
         <string name="skill_web">Web</string>
+        <string name="btn_proceed">Proceed</string>
+        <string name="content_desc_header">Header Neon</string>
+        <string name="content_desc_calendar">Pilih Tanggal</string>
 </resources>
