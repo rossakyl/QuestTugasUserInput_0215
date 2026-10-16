@@ -311,6 +311,27 @@ fun FormBiodataScreen() {
 
                     Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.space_large)))
 
+                    // Tombol Proceed
+                    Button(
+                        onClick = { isSubmitted = true },
+                        enabled = isButtonEnabled,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(dimensionResource(id = R.dimen.button_height)),
+                        shape = RoundedCornerShape(dimensionResource(id = R.dimen.input_corner_radius)),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = colorResource(id = R.color.btn_active_bg),
+                            contentColor = colorResource(id = R.color.btn_active_text),
+                            disabledContainerColor = colorResource(id = R.color.btn_disabled_bg),
+                            disabledContentColor = colorResource(id = R.color.btn_disabled_text)
+                        )
+                    ) {
+                        Text(
+                            text = stringResource(id = R.string.btn_proceed),
+                            fontWeight = FontWeight.SemiBold
+                        )
+                    }
+
                    
                 }
             }
