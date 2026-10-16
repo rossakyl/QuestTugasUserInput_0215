@@ -82,5 +82,25 @@ fun FormBiodataScreen() {
         }
     }
 
-   
+    // DatePickerDialog Logic
+    val calendar = Calendar.getInstance()
+    val datePickerDialog = DatePickerDialog(
+        context,
+        { _, year, month, dayOfMonth ->
+            birthDate = "$dayOfMonth/${month + 1}/$year"
+        },
+        calendar.get(Calendar.YEAR),
+        calendar.get(Calendar.MONTH),
+        calendar.get(Calendar.DAY_OF_MONTH)
+    )
+
+    // Validasi tombol Proceed aktif jika seluruh input terisi
+    val isButtonEnabled = firstName.isNotBlank() &&
+            lastName.isNotBlank() &&
+            email.isNotBlank() &&
+            birthDate.isNotBlank() &&
+            experience.isNotBlank() &&
+            (isAndroidChecked || isUiUxChecked || isWebChecked)
+
+
 }
