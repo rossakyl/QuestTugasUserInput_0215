@@ -162,6 +162,37 @@ fun FormBiodataScreen() {
 
                     Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.space_large)))
 
+                    // Input Nama Depan & Belakang
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.space_small))
+                    ) {
+                        OutlinedTextField(
+                            value = firstName,
+                            onValueChange = { firstName = it },
+                            placeholder = { Text(stringResource(id = R.string.hint_nama_depan)) },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.input_corner_radius)),
+                            singleLine = true,
+                            colors = OutlinedTextFieldDefaults.colors(
+                                unfocusedBorderColor = colorResource(id = R.color.text_field_border)
+                            )
+                        )
+                        OutlinedTextField(
+                            value = lastName,
+                            onValueChange = { lastName = it },
+                            placeholder = { Text(stringResource(id = R.string.hint_nama_belakang)) },
+                            modifier = Modifier.weight(1f),
+                            shape = RoundedCornerShape(dimensionResource(id = R.dimen.input_corner_radius)),
+                            singleLine = true,
+                            colors = OutlinedTextFieldDefaults.colors(
+                                unfocusedBorderColor = colorResource(id = R.color.text_field_border)
+                            )
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.space_medium)))
+
 
                 }
             }
