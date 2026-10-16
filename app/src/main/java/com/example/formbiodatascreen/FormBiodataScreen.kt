@@ -50,3 +50,23 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
 import java.util.Calendar
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun FormBiodataScreen() {
+    val context = LocalContext.current
+
+    // State Input Form
+    var firstName by remember { mutableStateOf("") }
+    var lastName by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var birthDate by remember { mutableStateOf("") }
+    var experience by remember { mutableStateOf("") }
+
+    // State Checkbox Skill
+    var isAndroidChecked by remember { mutableStateOf(false) }
+    var isUiUxChecked by remember { mutableStateOf(false) }
+    var isWebChecked by remember { mutableStateOf(false) }
+
+    
+}
